@@ -9,10 +9,10 @@ const server = createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: '*',
+        origin: "https://group-chat-app-e6bx.vercel.app",
+        methods: ["GET", "POST"],
     },
 });
-
 const ROOM = 'group';
 
 io.on('connection', (socket) => {
